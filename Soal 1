@@ -1,0 +1,20 @@
+def tiga_nilai_terbaik(nilai):
+    if len(nilai) < 3:
+        return "List tidak memiliki cukup nilai"
+    
+    nilai_terbaik = []
+    for _ in range(3):
+        max_nilai = max(nilai)
+        nilai_terbaik.append(max_nilai)
+        nilai.remove(max_nilai)
+    
+    return nilai_terbaik
+
+# List nilai
+nilai = [85, 92, 78, 90, 88, 82, 95, 87, 91, 83]
+
+# Memanggil fungsi tiga_nilai_terbaik dengan list nilai sebagai parameter
+nilai_terbaik = tiga_nilai_terbaik(nilai.copy())
+
+# Menampilkan hasil
+print("Tiga nilai terbaik:", nilai_terbaik)
