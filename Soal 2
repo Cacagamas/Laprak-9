@@ -1,0 +1,21 @@
+
+angka = []
+
+print("Masukkan angka (ketik 'done' untuk selesai):")
+while True:
+    masukan = input("Masukkan angka: ")
+    if masukan == 'done':
+        break
+    else:
+        try:
+            angka.append(float(masukan))
+        except ValueError:
+            print("Masukan tidak valid, masukkan angka atau 'done' untuk selesai.")
+
+if angka:
+    nilai_maksimum = max(angka)
+    nilai_minimum = min(angka)
+    print("\nNilai maksimum:", nilai_maksimum)
+    print("Nilai minimum:", nilai_minimum)
+else:
+    print("\nTidak ada angka yang dimasukkan.")
